@@ -1,0 +1,90 @@
+<section class="login flex justify-center pt-24">
+    <div class="w-full max-w-xs">
+        <form action="/register" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <% if(messages.error) { %>
+                <span class="text-red-500 text-sm">
+                    <%= messages.error %>
+                </span>
+                <% } %>
+                    <!-- <div class="mb-6">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Name</label>
+                        <input name="name" value="<%= messages.name %>"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                            id="username" type="text" placeholder="Enter your Name">
+                    </div> -->
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="username"></label>
+                        <input name="email" value="<%= messages.email %>"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="username" type="email" placeholder="Email address">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="password"></label>
+                        <input name="password"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                            id="password" type="password" placeholder="Password">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="first_name"></label>
+                        <input name="first_name" value="<%= messages.first_name %>"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                            id="first_name" type="text" placeholder="First Name">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="last_name"></label>
+                        <input name="last_name" value="<%= messages.last_name %>"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                            id="last_name" type="text" placeholder="Last Name">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="dob"></label>
+                        <input name="dob" value="<%= messages.dob %>"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                            id="dob" type="date" placeholder="Date of birth">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="countries"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+                        <select id="countries" name="country" value="<%= messages.country %>"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <script>
+                                const countries = [
+                                    "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
+                                    "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan",
+                                    "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia",
+                                    "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo, Democratic Republic of the",
+                                    "Congo, Republic of the", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic",
+                                    "East Timor (Timor-Leste)", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini (formerly Swaziland)",
+                                    "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea",
+                                    "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy",
+                                    "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kosovo", "Kuwait",
+                                    "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia"
+                                ];
+
+
+                                const selectElement = document.getElementById("countries");
+
+                                for (const country of countries) {
+                                    const optionElement = document.createElement("option");
+                                    optionElement.textContent = country;
+                                    selectElement.appendChild(optionElement);
+                                }
+                            </script>
+                        </select>
+                    </div>
+
+
+                    <div class="flex items-center justify-between">
+                        <button
+                            class="btn-primary rounded-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="submit">Join Us</button>
+                        <a class="inline-block align-baseline font-bold text-sm" href="/login">Already have account?</a>
+                    </div>
+
+        </form>
+        <p class="text-center text-gray-500 text-xs">
+            &copy;2023 NIKE. All rights reserved.
+        </p>
+    </div>
+</section>
